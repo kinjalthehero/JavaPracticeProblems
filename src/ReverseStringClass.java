@@ -21,8 +21,19 @@ public class ReverseStringClass {
         return revString;
     }
 
+    // Using String Builder
+    public static String stringReverseUsingStringBuilder (String str) {
+
+        return new StringBuilder(str).reverse().toString();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println(stringReverse(sc.nextLine()));
+        String str = sc.nextLine();
+        System.out.println("Using String methods");
+        System.out.println(stringReverse(str));
+        System.out.println("Using String Builder");
+        System.out.println(stringReverseUsingStringBuilder(str));
+
     }
 }
